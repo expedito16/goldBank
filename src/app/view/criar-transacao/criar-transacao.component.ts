@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-criar-transacao',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./criar-transacao.component.scss']
 })
 export class CriarTransacaoComponent implements OnInit {
+  @Output() enviarTransacao = new EventEmitter<any>();
 
   nome?: string;
   conta?: string;
@@ -16,10 +17,9 @@ export class CriarTransacaoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  enviarTransacao() {
-    console.log("nome", this.nome);
-    console.log("conta", this.conta);
-    console.log("valor", this.valor);
+  confirmarTransacao() {
+    const transacao = { nome: this.nome, conta: this.conta, valor: this.valor };
+    this.enviarTransacao.emit(transacao);
   }
 
 }
