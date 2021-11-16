@@ -1,3 +1,14 @@
+.titulo {
+  text-align: center;
+  background-color: #d0ad00;
+  color: #ffffff;
+  padding: 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  margin-bottom: 45px;
+  font-size: 30px;
+}
+
 .formulario {
   max-width: 400px;
   padding: 20px;
@@ -30,33 +41,20 @@
 }
 
 .botao {
-  text-align: right;
-
-  &__cancelar {
-    font-size: 14px;
-    background-color: #df0000;
-    color: #ffffff;
-    padding: 10px 18px;
-    border-radius: 4px;
-    border: none;
-    margin-right: 4px;
-    cursor: pointer;
-  }
-
-  &__cancelar:active {
-    background-color: #ff0000;
-    color: #ffffff;
-  }
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
 
   &__confirmar {
-    font-size: 14px;
+    font-size: 18px;
     background-color: #006400;
     color: #ffffff;
-    padding: 10px 18px;
+    padding: 12px;
     border-radius: 4px;
     border: none;
-    margin-left: 4px;
     cursor: pointer;
+    text-transform: uppercase;
   }
 
   &__confirmar:active {

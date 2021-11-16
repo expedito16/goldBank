@@ -1,5 +1,5 @@
 <div class="container">
-  <form class="formulario">
+  <form class="formulario" (ngSubmit)="enviarTransacao()">
     <h2 class="titulo">Transação</h2>
 
     <div class="form-field">
@@ -7,30 +7,29 @@
       <input
         class="form-field__input"
         type="text"
-      >
-
-      <label class="form-field__label">Agência</label>
-      <input
-        class="form-field__input"
-        type="text"
+        name="nome"
+        [(ngModel)]="nome"
       >
 
       <label class="form-field__label">Conta</label>
       <input
         class="form-field__input"
         type="text"
+        name="conta"
+        [(ngModel)]="conta"
       >
 
       <label class="form-field__label">Valor</label>
       <input
         class="form-field__input"
-        type="text"
+        type="number"
+        name="valor"
+        [(ngModel)]="valor"
       >
     </div>
 
     <div class="botao">
-      <button class="botao__cancelar">Cancelar</button>
-      <button class="botao__confirmar">Confirmar</button>
+      <button class="botao__confirmar">Confirmar transação</button>
     </div>
   </form>
 </div>

@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CriarTransacaoComponent implements OnInit {
 
+  nome?: string;
+  conta?: string;
+  valor?: number;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  enviarTransacao() {
+    console.log("nome", this.nome);
+    console.log("conta", this.conta);
+    console.log("valor", this.valor);
   }
 
 }
