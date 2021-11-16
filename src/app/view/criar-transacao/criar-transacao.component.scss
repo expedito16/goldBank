@@ -1,0 +1,66 @@
+.formulario {
+  max-width: 400px;
+  padding: 20px;
+  box-shadow: 0 0 8px black;
+  border-radius: 8px;
+}
+
+.form-field {
+  width: 100%;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    font-size: 18px;
+    margin-bottom: 4px;
+    color: #4d4d4d;
+  }
+
+  &__input {
+    font-size: 15px;
+    color: #4d4d4d;
+    padding: 7px 0;
+    border-radius: 4px;
+    outline: none;
+    border: 2px solid #c4c4c4;
+    background-color: #f5f5f5;
+    margin-bottom: 10px;
+  }
+}
+
+.botao {
+  text-align: right;
+
+  &__cancelar {
+    font-size: 14px;
+    background-color: #df0000;
+    color: #ffffff;
+    padding: 10px 18px;
+    border-radius: 4px;
+    border: none;
+    margin-right: 4px;
+    cursor: pointer;
+  }
+
+  &__cancelar:active {
+    background-color: #ff0000;
+    color: #ffffff;
+  }
+
+  &__confirmar {
+    font-size: 14px;
+    background-color: #006400;
+    color: #ffffff;
+    padding: 10px 18px;
+    border-radius: 4px;
+    border: none;
+    margin-left: 4px;
+    cursor: pointer;
+  }
+
+  &__confirmar:active {
+    background-color: #00ad00;
+    color: #ffffff;
+  }
+}

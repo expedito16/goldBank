@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.titulo {
+  text-align: center;
+  background-color: #d0ad00;
+  color: #ffffff;
+  padding: 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 400px;
+  padding: 60px;
+}
+
