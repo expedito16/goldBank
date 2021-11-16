@@ -5,11 +5,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CriarTransacaoComponent } from './view/criar-transacao/criar-transacao.component';
+import { ListarTransacaoComponent } from './view/listar-transacao/listar-transacao.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CriarTransacaoComponent
+    CriarTransacaoComponent,
+    ListarTransacaoComponent
   ],
   imports: [
     BrowserModule,
