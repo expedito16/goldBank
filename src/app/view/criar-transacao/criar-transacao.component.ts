@@ -20,6 +20,13 @@ export class CriarTransacaoComponent implements OnInit {
   confirmarTransacao() {
     const transacao = { nome: this.nome, conta: this.conta, valor: this.valor };
     this.enviarTransacao.emit(transacao);
+
+    this.limparCampos();
   }
 
+  limparCampos() {
+    this.nome = "";
+    this.conta = "";
+    this.valor = 0;
+  }
 }
