@@ -7,10 +7,10 @@ import { Component, Input } from '@angular/core';
 })
 export class AppComponent {
   title = 'goldBank';
-  @Input() transacao: any[] = [];
+  transacao: any[] = [];
 
   transacoes($event: any) {
-    const dados = {...$event}
+    const dados = { ...$event, data: new Date() };
     this.transacao.push(dados);
   }
 }

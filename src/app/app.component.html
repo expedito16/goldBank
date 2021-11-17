@@ -1,7 +1,3 @@
 <app-criar-transacao (enviarTransacao)="transacoes($event)"></app-criar-transacao>
 
-<div *ngFor="let item of transacao">
-  <p>nome: {{item.nome}}</p>
-  <p>conta: {{item.conta}}</p>
-  <p>valor: {{item.valor}}</p>
-</div>
+<app-listar-transacao [transacao]="transacao"></app-listar-transacao>
