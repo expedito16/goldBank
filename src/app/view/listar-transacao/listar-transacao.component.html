@@ -1,1 +1,29 @@
-<p>listar-transacao works!</p>
+<div class="container">
+  <h2 class="titulo">Lista de Transações</h2>
+
+  <div class="botao">
+    <button class="botao__criar-transacao">Criar transação</button>
+  </div>
+
+  <table class="tabela">
+    <thead class="tabela__cabecalho">
+      <th class="tabela__cabecalho__conteudo">Data</th>
+      <th class="tabela__cabecalho__conteudo">Nome do Beneficiário</th>
+      <th class="tabela__cabecalho__conteudo">Conta</th>
+      <th class="tabela__cabecalho__conteudo">Valor</th>
+    </thead>
+
+    <tbody *ngIf="transacao.length > 0; else listaTransferenciasVazia">
+      <tr *ngFor="let item of transacao" class="tabela__linha">
+        <td class="tabela__conteudo">{{item.data}}</td>
+        <td class="tabela__conteudo">{{item.nome}}</td>
+        <td class="tabela__conteudo">{{item.conta}}</td>
+        <td class="tabela__conteudo">{{item.valor}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <ng-template #listaTransferenciasVazia>
+    <p class="mensagem">Nenhuma transação realizada ate o momento!</p>
+  </ng-template>
+</div>
+

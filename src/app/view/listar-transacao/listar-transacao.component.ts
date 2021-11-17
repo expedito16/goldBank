@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-listar-transacao',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./listar-transacao.component.scss']
 })
 export class ListarTransacaoComponent implements OnInit {
+  @Input() transacao: any
 
   constructor() { }
 
