@@ -15,10 +15,10 @@
 
     <tbody *ngIf="transacao.length > 0; else listaTransferenciasVazia">
       <tr *ngFor="let item of transacao" class="tabela__linha">
-        <td class="tabela__conteudo">{{item.data}}</td>
+        <td class="tabela__conteudo">{{item.data | date: "short"}}</td>
         <td class="tabela__conteudo">{{item.nome}}</td>
         <td class="tabela__conteudo">{{item.conta}}</td>
-        <td class="tabela__conteudo">{{item.valor}}</td>
+        <td class="tabela__conteudo">{{item.valor | currency}}</td>
       </tr>
     </tbody>
   </table>
