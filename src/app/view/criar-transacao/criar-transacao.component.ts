@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { TransacaoService } from '../service/transacao.service';
 
 @Component({
   selector: 'app-criar-transacao',
@@ -12,14 +13,18 @@ export class CriarTransacaoComponent implements OnInit {
   conta?: string;
   valor?: number;
 
-  constructor() { }
+  constructor(
+    private transacaoService: TransacaoService
+  ) { }
 
   ngOnInit(): void {
   }
 
   confirmarTransacao() {
     const transacao = { nome: this.nome, conta: this.conta, valor: this.valor };
-    this.enviarTransacao.emit(transacao);
+    this.transacaoService.criarTransacao(transacao).subscribe((resultado: any) => {
+      alert("Transação realizada com sucesso!");
+    });
 
     this.limparCampos();
   }
