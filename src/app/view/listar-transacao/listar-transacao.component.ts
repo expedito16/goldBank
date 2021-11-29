@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { TransacaoService } from '../service/transacao.service';
 
 @Component({
   selector: 'app-listar-transacao',
@@ -6,11 +7,20 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./listar-transacao.component.scss']
 })
 export class ListarTransacaoComponent implements OnInit {
-  @Input() transacao: any
+  transacoes: any[] = [];
 
-  constructor() { }
+  constructor(
+    private transacaoService: TransacaoService
+  ) { }
 
   ngOnInit(): void {
+    this.listaTransacoes();
+  }
+
+  listaTransacoes() {
+    this.transacaoService.listaTransacoes().subscribe((transacao: any) => {
+      this.transacoes = transacao;
+    });
   }
 
 }
