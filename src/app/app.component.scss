@@ -4,11 +4,15 @@ header {
   padding: 30px 30px;
   display: flex;
   justify-content: space-between;
-}
 
-a {
-  font-size: 20px;
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: bold;
+  a {
+    font-size: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .ativo {
+    display: none;
+  }
 }
