@@ -5,25 +5,7 @@
 .titulo {
   font-size: 30px;
   border-bottom: 2px solid #d0ad00;
-}
-
-.botao {
-  text-align: right;
-  margin-bottom: 60px;
-
-  &__criar-transacao {
-    padding: 10px 20px;
-    background-color: #d0ad00;
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-
-  &__criar-transacao:hover {
-background-color: #f2f207;
-  }
+  margin-bottom: 50px;
 }
 
 .tabela {
